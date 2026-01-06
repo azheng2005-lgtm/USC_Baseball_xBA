@@ -3,13 +3,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-class bip:
+class BIP:
     def __init__(self, ev, la, result):
         self.ev = ev
         self.la = la
         self.result = result
 
-class ev_la_group:
+class EV_LA_Group:
     def __init__(self, ev, la):
         self.ev = ev
         self.la = la
@@ -22,7 +22,7 @@ class ev_la_group:
     def xba(self):
         ab = 0
         hit = 0
-        for bip in self.every_bip:
+        for bip in self.bip:
             ab += 1
             if bip.result != "Out" and bip.result != "FieldersChoice" and bip.result != "Error":
                 hit += 1
@@ -32,7 +32,7 @@ class ev_la_group:
     def display(self):
         return f"EV: {self.ev}, LA: {self.la}, Count: {len(self.every_bip)}, XBA: {self.xba()}"
 
-class player:
+class Player:
     def __init__(self, name):
         self.name = name
         self.bip = []
