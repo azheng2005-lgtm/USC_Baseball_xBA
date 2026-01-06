@@ -51,7 +51,6 @@ x = []
 trojans= []
 
 csv_files = glob.glob("*.csv")
-# Read and combine all into one DataFrame (optional)
 dfs = []
 for file in csv_files:
     df = pd.read_csv(file)
